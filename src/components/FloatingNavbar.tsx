@@ -23,10 +23,15 @@ export function FloatingNavbar() {
                 width="1.75em"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <title>PromptCraft</title>
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                <title>Звёздная карта</title>
+                <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.9"/>
+                <path d="M12 2 L13.5 8.5 L20 7 L15 11.5 L18 18 L12 14.5 L6 18 L9 11.5 L4 7 L10.5 8.5 Z" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinejoin="round"/>
+                <circle cx="4" cy="4" r="1" fill="currentColor" opacity="0.6"/>
+                <circle cx="20" cy="4" r="0.8" fill="currentColor" opacity="0.5"/>
+                <circle cx="20" cy="20" r="1" fill="currentColor" opacity="0.6"/>
+                <circle cx="4" cy="20" r="0.7" fill="currentColor" opacity="0.4"/>
               </svg>
-              <span className="font-semibold text-lg font-open-sans-custom tracking-tight">PromptCraft</span>
+              <span className="font-semibold text-lg font-open-sans-custom tracking-tight">Астролог</span>
             </div>
           </button>
 
@@ -36,7 +41,7 @@ export function FloatingNavbar() {
               onClick={() => scrollToSection("features")}
               className="text-sm font-open-sans-custom text-gray-300 transition-colors hover:text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
             >
-              Функции
+              Услуги
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
@@ -48,7 +53,7 @@ export function FloatingNavbar() {
               onClick={() => scrollToSection("about")}
               className="text-sm font-open-sans-custom text-gray-300 transition-colors hover:text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
             >
-              О нас
+              Обо мне
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -62,8 +67,9 @@ export function FloatingNavbar() {
           <Button
             size="sm"
             className="bg-white text-black hover:bg-gray-100 [text-shadow:_0_1px_2px_rgb(0_0_0_/_10%)] font-open-sans-custom"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}
           >
-            Начать
+            Записаться
           </Button>
         </div>
       </div>
